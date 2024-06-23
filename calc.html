@@ -10,32 +10,50 @@
 
 <div class = "app">
 
-    <div class = "userinp"><input class = "userinput"></input></div>
+    <div class = "userinp"><input class = "userinput" id="up"></input></div>
 
 
 
     <div class = "buttongrid">
-        <button class = "iconsp">+</button>
-        <button class = "icon">7</button>
-        <button class = "icon">8</button>
-        <button class = "icon">9</button>
-        <button class = "iconsp">-</button>
-        <button class = "icon">4</button>
-        <button class = "icon">5</button>
-        <button class = "icon">6</button>
-        <button class = "iconsp">*</button>
-        <button class = "icon">1</button>
-        <button class = "icon">2</button>
-        <button class = "icon">3</button>
-        <button class = "iconsp">/</button>
-        <button class = "icon">0</button>
-        <button class = "icon">.</button>
-        <button class = "icon">=</button>
-        <button class = "iconsp">C</button>
+        <button class = "iconsp" onclick="addtoinput('+');">+</button>
+        <button class = "icon" onclick="addtoinput('7');">7</button>
+        <button class = "icon" onclick="addtoinput('8');">8</button>
+        <button class = "icon" onclick="addtoinput('9');">9</button>
+        <button class = "iconsp" onclick="addtoinput('-');">-</button>
+        <button class = "icon" onclick="addtoinput('4');">4</button>
+        <button class = "icon" onclick="addtoinput('5');">5</button>
+        <button class = "icon" onclick="addtoinput('6');">6</button>
+        <button class = "iconsp" onclick="addtoinput('*');">*</button>
+        <button class = "icon" onclick="addtoinput('1');">1</button>
+        <button class = "icon" onclick="addtoinput('2');">2</button>
+        <button class = "icon" onclick="addtoinput('3');">3</button>
+        <button class = "iconsp" onclick="addtoinput('/');">/</button>
+        <button class = "icon" onclick="addtoinput('0');">0</button>
+        <button class = "icon" onclick="addtoinput('.');">.</button>
+        <button class = "icon"  onclick = "equall();">=</button>
+        <button class = "iconsp" onclick="erase();">C</button>
     </div>
 
 
+    <script>
 
+        function addtoinput(ele){
+            document.getElementById('up').value+=ele;
+        }
+
+        function erase(){
+            document.getElementById('up').value="";
+        }
+
+        function equall(){
+        console.log(document.getElementById('up').value);
+        console.log(eval( document.getElementById('up').value));
+        let ans = eval( document.getElementById('up').value);
+        document.getElementById('up').value=ans;
+        }
+        
+
+    </script>
 
 
 
