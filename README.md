@@ -1,1 +1,3 @@
-# js-calc-ver1
+# First javascript project
+
+Basic Calculator
