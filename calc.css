@@ -70,10 +70,15 @@
 
 .icon:hover{
     cursor: pointer;
+    opacity: 50%;
 }
 .iconsp:hover{
     cursor: pointer;
 }
+
+.icon:active{
+    opacity: 80%;
+}
 body{
-    height:2000px;
+    height:900px;
 }
