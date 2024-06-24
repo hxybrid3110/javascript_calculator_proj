@@ -7,12 +7,9 @@ function erase(){
 }
 
 function equall(){
-console.log(document.getElementById('up').value);
-console.log(eval( document.getElementById('up').value));
 try{
-let ans = eval( document.getElementById('up').value);
-document.getElementById('up').value=ans;}
-catch{
+    document.getElementById('up').value = eval( document.getElementById('up').value);}
+catch(error){
     document.getElementById('up').value="invalid";
 }
 }
